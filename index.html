@@ -40,6 +40,7 @@
     padding: 16px 24px;
     max-width: 1100px;
     margin: 0 auto;
+    gap: 16px;
   }
   .logo {
     display: flex;
@@ -55,14 +56,26 @@
     color: var(--maroon-dark);
     display: flex; align-items: center; justify-content: center;
     font-size: 18px;
+    flex-shrink: 0;
   }
   nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 28px;
     font-size: 15px;
   }
   nav a:hover { color: var(--gold); }
+  .fb-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .fb-link:hover { background: rgba(255,255,255,0.2); }
   .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 26px; cursor: pointer; }
 
   /* Hero */
@@ -203,6 +216,7 @@
   }
   .contact-details h4 { color: var(--maroon); font-size: 15px; margin-bottom: 2px; }
   .contact-details p { color: var(--text-muted); font-size: 15px; }
+  .contact-details a { color: var(--maroon); font-weight: bold; }
   .map-embed { border-radius: 8px; overflow: hidden; border: 1px solid #e8dfd0; height: 320px; }
   .map-embed iframe { width: 100%; height: 100%; border: 0; }
 
@@ -215,6 +229,15 @@
     font-size: 14px;
   }
   footer .foot-logo { color: #fff; font-size: 18px; font-weight: bold; margin-bottom: 8px; }
+  footer .foot-social { margin-top: 10px; }
+  footer .foot-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #f0e6d8;
+    font-weight: bold;
+  }
+  footer .foot-social a:hover { color: var(--gold); }
 
   @media (max-width: 768px) {
     nav ul { display: none; }
@@ -240,6 +263,11 @@
         <li><a href="#ministries">Ministries</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Visit Us</a></li>
+        <li>
+          <a class="fb-link" href="https://www.facebook.com/NewStMaryBaptistChurch/" target="_blank" rel="noopener">
+            <span aria-hidden="true">f</span> Facebook
+          </a>
+        </li>
       </ul>
     </nav>
     <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')" aria-label="Toggle menu">&#9776;</button>
@@ -251,6 +279,7 @@
   <p>A wonderful, small, mixed, and friendly congregation in the heart of Ocala, Florida.</p>
   <a href="#contact" class="btn btn-primary">Plan Your Visit</a>
   <a href="tel:+13526229809" class="btn btn-outline">Call (352) 622-9809</a>
+  <a href="https://www.facebook.com/NewStMaryBaptistChurch/" target="_blank" rel="noopener" class="btn btn-outline">Follow on Facebook</a>
 </section>
 
 <div class="info-strip">
@@ -362,6 +391,13 @@
           <p>Contact the church office for current Sunday and midweek service times.</p>
         </div>
       </div>
+      <div class="item">
+        <div class="icon-sm">f</div>
+        <div>
+          <h4>Facebook</h4>
+          <p><a href="https://www.facebook.com/NewStMaryBaptistChurch/" target="_blank" rel="noopener">facebook.com/NewStMaryBaptistChurch</a></p>
+        </div>
+      </div>
     </div>
     <div class="map-embed">
       <iframe
@@ -374,6 +410,11 @@
 <footer>
   <div class="foot-logo">New St Mary Baptist Church</div>
   <p>NW 27th Ave, Ocala, FL 34475 &nbsp;|&nbsp; (352) 622-9809</p>
+  <p class="foot-social">
+    <a href="https://www.facebook.com/NewStMaryBaptistChurch/" target="_blank" rel="noopener">
+      <span aria-hidden="true">f</span> Find us on Facebook
+    </a>
+  </p>
   <p style="margin-top:8px;">&copy; 2026 New St Mary Baptist Church. All rights reserved.</p>
 </footer>
 
